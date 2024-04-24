@@ -1,30 +1,55 @@
-README
+# Crypto Tracker
 
-Este é um script Python que permite acompanhar o preço e notícias de criptomoedas. Ele usa a API CoinMarketCap para obter os dados.
-Requisitos
+Um simples programa Python para acompanhar cotações e notícias de criptomoedas.
 
-    Python 3.x
-    módulo requests
+## Requisitos
 
-Instalação
+- Python 3.x
+- Bibliotecas: `requests`, `json`
 
-    Clone o repositório ou baixe o script
-    Instale o módulo requests usando pip install requests
+## Instalação
 
-Como Usar
+1. Clone este repositório:
 
-    Adicione sua chave API CoinMarketCap na variável headers
+   ```bash
+   git clone https://github.com/seu_usuario/nome_do_repositorio.git
+   ```
 
-    Execute o script usando python nome_do_script.py
+2. Navegue até o diretório do projeto:
 
-    Escolha uma das opções disponíveis no menu:
-        Acompanhar cotação: mostra o preço atual de uma criptomoeda especificada pelo seu símbolo (ex: BTC para Bitcoin).
-        Acompanhar notícias: mostra as notícias mais recentes de uma criptomoeda especificada pelo seu símbolo.
-        Adicionar moeda: adiciona uma nova criptomoeda à lista de moedas a serem monitoradas.
-        Sair: encerra o programa.
+   ```bash
+   cd nome_do_repositorio
+   ```
 
-Observações
+3. Instale as dependências:
 
-    A lista de moedas monitoradas é armazenada apenas na memória enquanto o programa está em execução, ou seja, ela será reiniciada toda vez que o programa for encerrado.
-    O intervalo de datas das notícias é definido nas variáveis start_date e end_date dentro da função noticias.
-    O valor da moeda é apresentado em reais (BRL), mas pode ser modificado alterando a variável convert dentro da função Moedas.
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Execute o programa:
+
+   ```bash
+   python crypto_tracker.py
+   ```
+
+## Funcionalidades
+
+- **Acompanhar cotação**: Digite o símbolo da criptomoeda para ver sua cotação em reais.
+- **Acompanhar notícias**: Digite o símbolo da criptomoeda para ver as últimas notícias relacionadas.
+- **Adicionar Moeda**: Adicione uma nova criptomoeda para acompanhar sua cotação.
+
+## Aviso
+
+Este programa faz uso da API do CoinMarketCap. Certifique-se de ter uma chave de API válida e substitua-a no código-fonte antes de executar o programa.
+
+```python
+headers = {
+    'Accepts': 'application/json',
+    'X-CMC_PRO_API_KEY': 'sua chave api aqui'
+}
+```
+
+## Contribuição
+
+Sinta-se à vontade para contribuir com novos recursos, correções de bugs ou melhorias. Abra um PR e teremos o prazer de revisar.
